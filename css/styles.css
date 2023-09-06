@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@600&display=swap');
+
+
+:root{
+    --dark-color:#141301;
+    --mid-color:#666370;
+    --light-color:#F3E8EE;
+    --accent-color:#C7792B;
+    --alt-accent-color:#F0CF65;
+}
+
+/* Setting Grid */
+body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 
+    minmax(100px, auto)  /* header */
+    minmax(100px, auto) /* slideshow */
+    minmax(100px, auto) /* x */
+    minmax(100px, auto)
+    minmax(100px, 200px) /* links */
+    minmax(100px, auto)
+    minmax(100px, auto) /*Texto  */
+    minmax(100px, 400px) /* Pedi el tuyo! */
+    minmax(100px, 400px) /* Video */
+    minmax(100px, auto) /* y */
+    minmax(100px, auto) /* footer */;
+    gap: 0;
+}
+
+header{
+    background-color: var(--light-color);
+    grid-column: 1/13;
+    grid-row: 1/1;
+}
+
+.slide {
+    grid-column: 1/13;
+    grid-row: 2/5;
+    background-color: #666370;
+}
+
+.links {
+    grid-column: 1/13;
+    grid-row: 5/6;
+}
+
+article {
+    background-color: #C7792B;
+    grid-column: 1/13;
+    grid-row: 6/8;
+}
+
+.pedidos {
+    grid-column: 1/13; 
+    grid-row: 8/9;
+    background-color: aliceblue;
+}
+.video {
+     grid-column: 1/13;
+     grid-row:9/10;
+    }
+
+footer {
+    display: block;
+    grid-column: 1/13;
+    grid-row: 11/12;
+    background-color: #141301;
+}
+
+/*Actual styling*/
+
+/* Header */
+.menumovil {
+    display: none;
+}
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    margin: 0;
+    padding:2rem 0rem;
+    color: var(--dark-color);
+}
+.todo {
+    background: url('../img/osb.jpg') no-repeat;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.21);
+}
+
+.nav-izquierdo{
+    flex-grow: 1;
+}
+.nav-izquierdo ul{
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    justify-content: space-evenly;  
+    padding-right: 0;
+    margin-right: 0;
+}
+.nav-derecho{
+    flex-grow: 1;
+}
+.nav-derecho ul{
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    justify-content: space-evenly;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+:is(.nav-derecho, .nav-izquierdo) ul li a:any-link {
+    color: var(--dark-color);
+    text-decoration: none;
+    position: relative;
+}
+
+:is(.nav-derecho, .nav-izquierdo) ul li a:any-link::before {
+    content: "";
+    position: absolute;
+    bottom: -2px; 
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: var(--dark-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.2s ease;
+}
+
+:is(.nav-derecho, .nav-izquierdo) ul li a:hover::before {
+    transform: scaleX(1.2);
+}
+
+
+.ig {
+    background: url(../img/instagram.svg) no-repeat;
+    background-size: contain;
+    flex-shrink: 1;
+    width: 35px;
+    height: 35px;
+    margin-right: 1.5rem;
+}
+
+.ig a:any-link{
+    color: transparent;
+}
+/*  */
+
+/* SLIDE */
+.slide {
+    background-color: #a5a04b67;
+}
+
+/* Link */
+.links {
+    background-color: #141301;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+    width: 100%;
+}
+.boton a{
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease-in-out;
+}
+.boton a:any-link{
+    text-decoration: none;
+    color: inherit;
+}
+.boton a:hover {
+    transform: scale(1.1);
+
+}
+.boton {
+    background-color: red;
+    height: 100%;
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: var(--light-color);
+    text-shadow: 2px 2px 2px var(--dark-color);
+}
+.osb{
+background-color: var(--alt-accent-color);
+background-image: url(../img/osbboton.jpg) ;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+} 
+.multilaminados {
+background-color: var(--light-color);
+background: url(../img/laminaboton.jpg) ;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+} 
+.maderas {
+background-color: var(--accent-color);
+background: url(../img/maderaboton.jpg) ;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+} 
+/* Pedidos */
+.pedidos {
+    background-color: var(--light-color);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: #F3E8EE;
+opacity: 1;
+background-image: linear-gradient(to right, #141301, #141301 20px, #F3E8EE 20px, #F3E8EE );
+background-size: 40px 100%;
+    
+}
+.pedibutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-color);
+    height: 15rem;
+    width: 35rem;
+    border: 10px double var(--mid-color);
+    border-radius: 15rem;
+    margin: auto;
+    box-shadow: 1px 3px 5px 5px var(--dark-color);
+}
+
+.pedibutton p{
+    color: var(--dark-color);
+    font-family: 'Great Vibes', cursive;
+    font-size: 6rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px var(--dark-color);
+}
+
+/* Video */
+.video {
+    background-color: #141301;
+    width: 100%;
+}
+.video video {
+    width: 100%;
+}
+
+/* Footer */
+.instagram {
+   background-color: #C7792B;
+}
+.consultas {
+    background-color: #666370;
+}
