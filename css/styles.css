@@ -22,9 +22,8 @@ body {
     minmax(100px, auto)
     minmax(100px, auto) /*Texto  */
     minmax(100px, 400px) /* Pedi el tuyo! */
-    minmax(100px, 400px) /* Video */
-    minmax(100px, auto) /* y */
-    minmax(100px, auto) /* footer */;
+    minmax(100px, auto) /* Video */
+    minmax(100px, 250px) /* footer */;
     gap: 0;
 }
 
@@ -42,30 +41,27 @@ header{
 
 .links {
     grid-column: 1/13;
-    grid-row: 5/6;
+    grid-row: 5/5;
 }
 
 article {
-    background-color: #C7792B;
     grid-column: 1/13;
     grid-row: 6/8;
 }
 
 .pedidos {
     grid-column: 1/13; 
-    grid-row: 8/9;
-    background-color: aliceblue;
+    grid-row: 8/8;
 }
 .video {
      grid-column: 1/13;
-     grid-row:9/10;
+     grid-row:9/9;
     }
 
 footer {
     display: block;
     grid-column: 1/13;
-    grid-row: 11/12;
-    background-color: #141301;
+    grid-row: 10/10;
 }
 
 /*Actual styling*/
@@ -225,6 +221,42 @@ background-size: cover;
 background-repeat: no-repeat;
 background-position: center center;
 } 
+/*  Article */
+article {
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    padding: 4rem;
+}
+.foco{
+    background: url(../img/foco.svg) no-repeat;
+    background-size: contain;
+    height: 80px;
+    width: 80px;
+    margin: 0px auto;
+    padding-bottom: 0;
+}
+article h2 {
+    margin-top: 0;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+    font-weight: bolder;
+}
+article .subheader p{
+    font-size: 1.3rem;
+    padding-bottom: 1.3rem;
+    font-weight: bold;
+}
+article p{
+    font-family: 'Poppins', sans-serif;;
+    margin: 0rem 4rem;
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+}
+
 /* Pedidos */
 .pedidos {
     background-color: var(--light-color);
@@ -260,8 +292,10 @@ background-size: 40px 100%;
 
 /* Video */
 .video {
-    background-color: #141301;
+    background-color: var(--light-color);
+    height: fit-content;
     width: 100%;
+    margin-bottom: 0;
 }
 .video video {
     width: 100%;
@@ -269,8 +303,58 @@ background-size: 40px 100%;
 
 /* Footer */
 .instagram {
-   background-color: #C7792B;
+   background-color: var(--light-color);
+   height: 50px;
+   display: flex;
+   flex-flow: row wrap;
+   align-items: center;
+   justify-content: right;
+   color: var(--dark-color);
+   font-size: 2rem;
+   font-weight: 540;
+   font-family: Arial, Helvetica, sans-serif;
+   padding-right: 0.5rem;
+}
+.insta {
+    background: url(../img/instagram.svg) no-repeat;
+    background-size: contain;
+    height: 35px;
+    width: 35px;
+    margin-left: 1rem;
+}
+.insta a{
+    text-align: center;
+    color: transparent;
 }
 .consultas {
-    background-color: #666370;
+    background-color: var(--dark-color);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: var(--light-color);
+    font-size: 2rem;
+    font-weight: 540;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.consultas p{
+    margin-left: 0.5rem;
+}   
+/* Footer Bottom */
+footer{
+    background-color: var(--light-color);
+    margin-top: 0;
+    height: fit-content;
+}
+footer .copy {
+    column-count: 2;
+    margin-left: 1rem;
+}
+
+footer .copy p {
+    color: var(--dark-color);
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
 }
