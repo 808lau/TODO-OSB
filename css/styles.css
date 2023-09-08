@@ -4,7 +4,7 @@
 :root{
     --dark-color:#141301;
     --mid-color:#666370;
-    --light-color:#F3E8EE;
+    --light-color:#f1e8ed;
     --accent-color:#C7792B;
     --alt-accent-color:#F0CF65;
 }
@@ -162,7 +162,13 @@ header h1 {
 
 /* SLIDE */
 .slide {
-    background-color: #a5a04b67;
+    background-color: var(--light-color);
+}
+.slide .imagen img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 /* Link */
@@ -345,6 +351,7 @@ footer{
     background-color: var(--light-color);
     margin-top: 0;
     height: fit-content;
+    min-height: 250px;
 }
 footer .copy {
     column-count: 2;
